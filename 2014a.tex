@@ -1,0 +1,507 @@
+\documentclass[fleqn,twocolumn,9pt]{jsarticle}
+
+\usepackage{csatmath}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage[multi]{otf}
+
+\begin{document}
+
+%%----------------
+
+\Question  % 1
+題意より，$2+a+1+2-3=6$．\quad $\therefore\ a = \Ans{4}$．
+
+%%----------------
+
+\Question  % 2
+$\cos$と$\tan$の関係より
+\begin{equation*}
+  \frac{1}{\cos^2 \theta} = \tan^2 \theta + 1 = \left(\frac{\sqrt{5}}{5}\right)^2 + 1 = \frac{6}{5}
+\end{equation*}
+倍角の公式より
+\begin{equation*}
+  \cos 2\theta = 2 \cos^2 \theta - 1 = 2 \cdot \frac{5}{6} - 1 = \Ans{\frac{2}{3}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 3
+$x$座標，$y$座標にそれぞれ着目して，
+\begin{gather*}
+  \frac{2}{5}a + \frac{3}{5} \cdot (-2) = 0 \Therefore{a = 3} \\
+  \frac{2}{5} \cdot 5 + \frac{3}{5} \cdot 0 = b \Therefore{b = 2}
+\end{gather*}
+したがって，$a+b=\Ans{5}$．
+
+%%----------------
+
+\Question  % 4
+公差を$d$とおくと，$a_9=3a_3$より
+\begin{equation*}
+  2+8d = 3(2+2d) \Therefore{d = 2}
+\end{equation*}
+したがって，$a_5=2+4d=\Ans{10}$．
+
+%%----------------
+
+\Question  % 5
+$A^C \cup B^C$の余事象は$A \cap B$なので，
+\begin{align*}
+  P(A) &= P(A \cap B) + P(A \cap B^C) \\
+  &= \left(1 - \frac{4}{5}\right) + \frac{1}{4} = \frac{9}{20}
+\end{align*}
+したがって，
+\begin{equation*}
+  P(A^C) = 1 - P(A) = 1 - \frac{9}{20} = \Ans{\frac{11}{20}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 6
+直線$x=4-y=z-1$上に2点$\Pt{P}(0,4,1)$，$\Pt{Q}(1,3,2)$をとると，$\Vect{BA}=(5,5,a-3)$と$\Vect{QP}=(1,-1,1)$が直交することから
+\begin{equation*}
+  \Vect{BA} \cdot \Vect{QP} = 5 \cdot 1 + 5 \cdot (-1) + (a-3) \cdot 1 = 0
+\end{equation*}
+これより$a-3=0$，すなわち$a=\Ans{3}$を得る．
+
+%%----------------
+
+\Question  % 7
+$f(x)$を変形すると，
+\begin{align*}
+  f(x) &= 2 \cos^2 x + k \sin 2x - 1 \\
+  &= \cos 2x + k \sin 2x \\
+  &= \sqrt{1+k^2} \sin (2x + \alpha)
+\end{align*}
+ただし，$\alpha$は$\sin\alpha = 1 / \sqrt{1+k^2}$を満たす角．$\sin(2x+\alpha)$の最大値は1であるから，題意より
+\begin{equation*}
+  \sqrt{1+k^2} = \sqrt{10} \Therefore{k = \Ans{3}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 8
+与えられた方程式より$(m_1,m_2)=(1/2,1)$．また，$y^2=8x \EqLabel{08-y}$の両辺を$x$で微分すると，
+\begin{equation*}
+  2y \cdot \frac{dy}{dx} = 8 \EqLabel{08-y'}
+\end{equation*}
+\EqRef{08-y}，\EqRef{08-y'}より，傾きが$m_1=1/2$である接線の接点は$(8,8)$であるとわかるので，この接線の方程式は，
+\begin{equation*}
+  y = \frac{1}{2}(x-8) + 8 = \frac{1}{2}x + 4 \EqLabel{08-L1}
+\end{equation*}
+同様にして，傾きが$m_2=1$である接線の方程式は，
+\begin{equation*}
+  y = (x-2) + 4 = x + 2 \EqLabel{08-L2}
+\end{equation*}
+\EqRef{08-L1}，\EqRef{08-L2}より，交点の$x$座標は$\Ans{4}$である．
+
+%%----------------
+
+\Question  % 9
+4が0個のときは，1，2，3から5個の数字を選ぶことになるので，場合の数は
+\begin{equation*}
+  \nHr{3}{5} = \nCr{7}{2} = 21
+\end{equation*}
+4が1個のときは，1，2，3から4個の数字を選ぶことになるので，場合の数は
+\begin{equation*}
+  \nHr{3}{4} = \nCr{6}{2} = 15
+\end{equation*}
+したがって，求める場合の数は$21 + 15 = \Ans{36}$．
+
+%%----------------
+
+\Question  % 10
+与えられた不等式を満たすことは，
+\begin{itemize}
+  \item $f(x) > 0$かつ$f(x) \ge g(x)$
+  \item $f(x) < 0$かつ$f(x) \le g(x)$
+\end{itemize}
+のいずれかを満たすことと同値である．図より，条件を満たす整数$x$は$-4$，$-1$，$1$，$3$，$4$の$\Ans{5}$個である．
+
+%%----------------
+
+\Question  % 11
+題意より，
+\begin{equation*}
+  f(n) = \frac{1}{n(n+1)}
+\end{equation*}
+また，
+\begin{align*}
+  g(n) &= b_1 + \sum_{k=1}^{n-1} \frac{1}{k(k+1)} \\
+  &= 1 + \sum_{k=1}^{n-1} \left(\frac{1}{k} - \frac{1}{k+1}\right) \\
+  &= 1 + \left(1 - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{n-1} - \frac{1}{n}\right) \\
+  &= 2 - \frac{1}{n}
+\end{align*}
+したがって，
+\begin{equation*}
+  f(4) = \frac{1}{20}, \quad g(10) = \frac{19}{10}, \quad \frac{g(10)}{f(4)} = \Ans{38}
+\end{equation*}
+
+%%----------------
+
+\Question  % 12
+$h(x)=f(x)g(x)$とおく．$h(x)$が$x=0$において連続であることより，
+\begin{equation*}
+  \lim_{x \to 0} h(x) = \lim_{x \to 0} \frac{f(x)}{\ln (x+1)}
+\end{equation*}
+は存在する．よって$f(0)=0$であり，$f(x)$の条件から$f(x)=x^2+ax$とおける．ロピタルの定理より，
+\begin{equation*}
+  \lim_{x \to 0} h(x) = \lim_{x \to 0} \frac{x^2+ax}{\ln (x+1)} = \lim_{x \to 0} \frac{2x+a}{1/(x+1)} = a
+\end{equation*}
+一方，
+\begin{equation*}
+  h(0) = f(0) \cdot g(0) = 0 \cdot 8 = 0
+\end{equation*}
+であるので，再び$h(x)$の$x=0$における連続性により$a=0$．ゆえに$f(x)=x^2$であり，$f(3)=\Ans{9}$．
+
+%%----------------
+
+\Question  % 13
+$l$の方程式は$x^2=(y+1)^2$，$C$の方程式は$x^2=2y-1$と変形できる．交点は$(1,0)$と$(3,2)$であるから，
+\begin{align*}
+  V &= \int_0^2 \{ \pi (y+1)^2 - \pi (2y^2-1) \} \, dy \\
+  &= \pi \int_0^2 (2y - y^2) \, dy \\
+  &= \pi \left[ y^2 - \frac{1}{3}y^3 \right]_0^2 = \Ans{\frac{4}{3}\pi}
+\end{align*}
+
+%%----------------
+
+\Question  % 14
+$C$の方程式を標準形に改めると
+\begin{equation*}
+  \frac{x^2}{1} + \frac{y^2}{(1/\sqrt{2})^2} = 1
+\end{equation*}
+となるので，$c < 0$より
+\begin{equation*}
+  c = -\sqrt{1^2 + \left(\frac{1}{\sqrt{2}}\right)^2} = -\sqrt{\frac{3}{2}}
+\end{equation*}
+一方，題意より，$\Pt{F}(c,0)$を原点中心に$-\theta$だけ回転させた点$(c \cos\theta, -c \sin\theta)$は直線$l$上にあるので，
+\begin{equation*}
+  c \cos\theta - (- c \sin\theta) - 1 = 0
+\end{equation*}
+すなわち
+\begin{equation*}
+  \cos\theta + \sin\theta = \frac{1}{c}
+\end{equation*}
+ここで
+\begin{equation*}
+  (\cos\theta + \sin\theta)^2 = 1 + 2 \cos\theta \sin\theta = 1 + \sin 2\theta
+\end{equation*}
+であるから，
+\begin{equation*}
+  \sin 2\theta = \left(\frac{1}{c}\right)^2 - 1 = \Ans{-\frac{1}{3}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 15
+辺$\Pt{A_2D_2}$を延長して辺$\Pt{C_1D_1}$と交差する点を$\Pt{E_1}$とする．$\Line{A_2B_2}=x$とおくと，図のように$\triangle\Pt{D_1D_2E_1}$の各辺の長さが決まる．
+\Fig{2014a-fig.15}
+ピタゴラスの定理より，
+\begin{equation*}
+  (2-3x)^2 + (1-x)^2 = 1^2
+\end{equation*}
+整理すると，
+\begin{equation*}
+  10x^2 - 14x + 4 = 2(5x-2)(x-1) = 0
+\end{equation*}
+$0 < x < 1$より$x=2/5$である．これより，$R_{n+1}$で新たに色が塗られる部分の面積は，$R_n$のときの$4/25$倍であるとわかるので（$n \ge 1$），
+\begin{align*}
+  S_\infty &= S_1 + \frac{4}{25} S_1 + \left(\frac{4}{25}\right)^2 S_1 + \cdots \\
+  &= \frac{1}{1-(4/25)} S_1 \\
+  &= \Ans{\frac{25}{21}\left(\frac{\pi}{2}-1\right)}
+\end{align*}
+
+%%----------------
+
+\Question  % 16
+確率の公理より，
+\begin{equation*}
+  P(0 \le X \le a) = ka^2 = 1 \EqLabel{16-P(X)}
+\end{equation*}
+また，確率密度関数を$f(x)$で表すと，
+\begin{equation*}
+  f(x) = \bigl( kx^2 \bigr)' = 2kx
+\end{equation*}
+であるので，
+\begin{align*}
+  E(X) &= \int_0^a x \cdot f(x) \, dx \\
+  &= \int_0^a 2kx^2 \,dx \\
+  &= \frac{2}{3}ka^3 = 1 \EqLabel{16-E(X)}
+\end{align*}
+\EqRef{16-P(X)}，\EqRef{16-E(X)}より，$a=3/2$，$k=\Ans{4/9}$．
+
+%%----------------
+
+\Question  % 17
+$AB+A^2B = E$より，
+\begin{equation*}
+  (A+A^2)B = E \Therefore{B^{-1} = A+A^2}
+\end{equation*}
+よって，\CIDK{358}は真である．また，同様に$A^{-1}$も存在するので，
+\begin{gather*}
+  (AB)^{-1} = B^{-1}A^{-1} = (A+A^2)A^{-1} = E+A \\
+  (BA)^{-1} = A^{-1}B^{-1} = A^{-1}(A+A^2) = E+A
+\end{gather*}
+したがって，$AB = BA = (E+A)^{-1}$であるから，\CIDK{361}も真である．さらに，$(A-E)^2+B^2=O$より，
+\begin{equation*}
+  (A+A^2)^2 (A-E)^2 + (A+A^2)^2 B^2 = O
+\end{equation*}
+ここで，$(A+A^2) B = E$より，
+\begin{equation*}
+  \text{（左辺）} = A^6 - 4A^4 + A^2 + E = (A^3-A)^2 + E
+\end{equation*}
+したがって，\CIDK{364}も真である．すなわち，\CIDK{358}，\CIDK{361}，\CIDK{364}はすべて真である．
+
+%%----------------
+
+\Question  % 18
+開区間$(k\pi - \pi/2, k\pi + \pi/2)$（$k$は整数）において，$y = \tan x$は実数全体を値域とする単調増加な関数であるので，$y = n$となる$x$の値が区間内にただひとつ存在する．したがって，
+\begin{equation*}
+  n\pi - \frac{3}{2}\pi \le a_n \le n\pi - \frac{1}{2}\pi
+\end{equation*}
+ここで，
+\begin{equation*}
+  \lim_{n \to \infty} \frac{1}{n}\left( n\pi - \frac{3}{2}\pi \right) = \lim_{n \to \infty} \frac{1}{n}\left( n\pi - \frac{1}{2}\pi \right) = \pi
+\end{equation*}
+であるから，はさみうちの原理により，
+\begin{equation*}
+  \lim_{n \to \infty} \frac{a_n}{n} = \Ans{\pi}
+\end{equation*}
+
+%%----------------
+
+\Question   % 19
+$S$を$xy$平面で切断したとき，断面の円の面積は$64\pi$であるから半径は$8$であり，$x$軸，$y$軸の両方に接することから中心は$(8,8)$に存在する．よって，$S$の中心の座標は$(8,8,z)$とおける．
+
+$S$を$xz$平面で切断すると，断面は図のようになる．
+\Fig{2014a-fig.19}
+$S$と$z$軸との2つの交点を$\Pt{Z_1}$，$\Pt{Z_2}$，中点を$\Pt{M}$，円の中心を$\Pt{C}$とおくと，$\triangle\Pt{Z_1CM}$は直角三角形となり，
+\begin{equation*}
+  \Line{Z_1C} = z, \hquad \Line{CM} = 8, \hquad \Line{MZ_1} = 4 \hquad (\because\ \Line{Z_1Z_2} = 8)
+\end{equation*}
+であるから，
+\begin{equation*}
+  z^2 = 8^2 + 4^2 = 80 \Therefore{z = 4\sqrt{5}}
+\end{equation*}
+すなわち，$S$の中心の座標は$(8,8,4\sqrt{5})$である．
+
+ここで，求める半径を$r$とおくと，$(8,0,0)$が$S$の表面上の一点であることから，
+\begin{equation*}
+  r^2 = 8^2 + \left( 4\sqrt{5} \right)^2 = 144 \Therefore{r=\Ans{12}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 20
+$h(x)=3f(x)+5g(x)$とおく．題意より，$f(x)$は整数であり，また$0 \le g(x) < 1$であるので，
+\begin{itemize}
+  \item $h(x)=10 \Rightarrow (f(x),g(x))=(2,0.8),\,(3,0.2)$
+  \item $h(x)=20 \Rightarrow (f(x),g(x))=(6,0.4)$
+  \item $h(x)=30 \Rightarrow (f(x),g(x))=(9,0.6),\,(10,0)$
+  \item $h(x)=40 \Rightarrow (f(x),g(x))=(12,0.8),\,(13,0.2)$
+\end{itemize}
+よって，$\log a = 3.2$，$\log b = 12.8$であるので，
+\begin{equation*}
+  \log ab = \log a + \log b = 3.2 + 12.8 = \Ans{16}
+\end{equation*}
+
+%%----------------
+
+\Question  % 21
+題意より，
+\begin{equation*}
+  f'(x) = \frac{\pi}{2} f(x+1)
+\end{equation*}
+よって，求める積分の値を$I$とすると，
+\begin{align*}
+  I &= \pi^2 \int_0^1 x f(x+1) \, dx \\
+  &= 2\pi \int_0^1 x f'(x) \, dx \\
+  &= 2\pi \Bigl[ xf(x) \Bigr]_0^1 - 2\pi \int_0^1 x'f(x) \, dx \\
+  &= 2\pi - 2\pi \int_0^1 f(x) \, dx
+\end{align*}
+ここで，$f(x)$は原点対称より$f(-1)=-1$であり，
+\begin{align*}
+  2\pi \int_0^1 f(x) \, dx &= -4 \cdot \frac{\pi}{2} \int_1^{-1+1} f(x) \, dx \\
+  &= -4f(-1) = 4
+\end{align*}
+したがって，$I=2\pi-4=\Ans{2(\pi-2)}$．
+
+%%----------------
+
+\Question  % 22
+合成関数の微分により，
+\begin{equation*}
+  f'(x)=5 \cdot (3x-3)' \cdot e^{3x-3} = 15e^{3x-3}
+\end{equation*}
+したがって，$f'(1) = \Ans{15}$．
+
+%%----------------
+
+\Question  % 23
+女性は全部で15人であり，そのうち完走者は9人なので，
+\begin{equation*}
+  p = \frac{9}{15} = \frac{3}{5} \Therefore{100p = \Ans{60}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 24
+$x(x-3)=X$とおくと，与えられた方程式は
+\begin{equation*}
+  \sqrt{2X} = X-4 \EqLabel{24-eq}
+\end{equation*}
+と書ける．両辺を二乗して整理すると，
+\begin{equation*}
+  X^2-10X+16 = (X-2)(X-8) = 0
+\end{equation*}
+\EqRef{24-eq}より$X-4 \ge 0$なので$X=8$．よって，$k$は
+\begin{equation*}
+  X-8 = x^2-3x-8 = 0
+\end{equation*}
+の2つの解の積であり，解と係数の関係より$k=-8$であるから，$k^2=\Ans{64}$．
+
+%%----------------
+
+\Question  % 25
+題意より，
+\begin{equation*}
+  1 - k \log \frac{R^{27/23}}{R} = \frac{v_c}{v_c/2}
+\end{equation*}
+すなわち
+\begin{equation*}
+  1 - \frac{4}{23} k \log R = 2 \EqLabel{24-2x}
+\end{equation*}
+同様にして，
+\begin{equation*}
+  1 - (a-1) k \log R = 3 \EqLabel{24-3x}
+\end{equation*}
+\EqRef{24-2x}，\EqRef{24-3x}より，
+\begin{equation*}
+  -k \log R = \frac{23}{4} = \frac{2}{a-1} \Therefore{23a = \Ans{31}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 26
+$n$が十分に大きいと仮定して，二項分布を
+\begin{equation*}
+  \mu = p = 0.8, \quad \sigma = \sqrt{\frac{p(1-p)}{n}} = \frac{0.4}{\sqrt{n}}
+\end{equation*}
+の正規分布で近似すると，信頼区間に関する条件から
+\begin{equation*}
+  1.96 \cdot \frac{0.4}{\sqrt{n}} = \frac{0.098}{2} \Therefore{n = \Ans{256}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 27
+楕円の性質より，$\Line{FP}+\Line{F'P}=10$であるから，
+\begin{equation*}
+  \Line{AP} - \Line{FP} = \Line{AP} - (10 - \Line{F'P}) = \Line{AP} + \Line{F'P} - 10
+\end{equation*}
+ここで$\Line{AP} + \Line{F'P}$が最小になるのは$\Pt{A}$，$\Pt{P}$，$\Pt{F'}$が一直線上に並ぶときであり，$\Line{AP} - \Line{FP}$の最小値が1であることより$\Line{AF'}=11$である．したがって，
+\begin{equation*}
+  a^2 + 4^2 = 11^2 \Therefore{a^2 = \Ans{105}}
+\end{equation*}
+
+%%----------------
+
+\Question  % 28
+$\triangle\Pt{ABC}$が二等辺三角形であるので
+\begin{equation*}
+  \Line{AC} = \frac{2}{\sin(\theta/2)}
+\end{equation*}
+$\Pt{P}$から$\Pt{AD}$に引いた垂線の足を$\Pt{H}$とすると，
+\begin{align*}
+  S(\theta) &= \frac{1}{2} \cdot \Line{BD} \cdot \Line{PH} \\
+  &= \frac{1}{2} (\Line{AD} - 4) (\Line{AP} \sin 2\theta) \\
+  &= \frac{1}{2} \left( \frac{2}{\sin(\theta/2)} - 4 \right) \cdot \frac{2}{\sin(\theta/2)} \cdot \sin 2\theta \\
+  &= 16 \cos\frac{\theta}{2} \cos\theta \left( \frac{1/2}{\sin(\theta/2)} - 1 \right)
+\end{align*}
+したがって，
+\begin{equation*}
+  \lim_{\theta \to 0} \theta S(\theta) = \Ans{16}
+\end{equation*}
+
+%%----------------
+
+\Question  % 29
+平面$y=4$，$y+3\sqrt{z}+8=0$に射影された点の$x$座標はもとの点の$x$座標に等しいから，$\Vect{PQ}$，$\Vect{P_1Q_1}$，$\Vect{P_2Q_2}$の$x$成分はみな等しい\EqLabel{29-1}．そこで，
+\begin{equation*}
+  \Vect{PQ}=(x, r \cos\theta, r \sin\theta) \quad \bigl( r \ge 0, \hquad 0 \le \theta < 2\pi \bigr)
+\end{equation*}
+とおく．与えられた座標空間を$yz$平面に射影すると以下の図のようになる．
+\Fig{2014a-fig.29}
+\EqRef{29-1}および上図より，
+\begin{align*}
+  \text{（与式）} &= 2|\Vect{PQ}|^2 - |\Vect{P_1Q_1}|^2 - |\Vect{P_2Q_2}|^2 \\
+  &= 2(x^2 + r^2) - (x^2 + r^2 \sin^2 \theta) \\
+  & \qquad - \left\{ x^2 + r^2 \cos^2 \left(\theta + \frac{\pi}{6}\right) \right\} \\
+  &= r^2 \left\{ 2 - \sin^2 \theta - \cos^2 \left(\theta + \frac{\pi}{6}\right) \right\} \\
+  &= r^2 \left\{ 1 + \frac{1}{2} \cos 2\theta - \frac{1}{2} \cos \left(2\theta + \frac{\pi}{3}\right) \right\} \\
+  &= r^2 \left\{ 1 + \sin \frac{\pi}{6} \sin \left(2\theta + \frac{\pi}{6}\right) \right\}
+\end{align*}
+題意より$r \le |\Vect{PQ}| \le 4$なので，与式は$r=4$，$\theta=\pi/6$のときに最大値$\Ans{24}$をとる．
+
+%%----------------
+
+\Question  % 30
+$g(x)=f(x)e^{-x}$より，
+\begin{gather*}
+  g'(x) = \{ f'(x) - f(x) \} e^{-x} \\
+  g''(x) = \{ f''(x) - 2f'(x) + f(x) \} e^{-x}
+\end{gather*}
+ここで，$f(x)=ax^2+bx+c$とおくと，(\CIDK{1086})より
+\begin{gather*}
+  g''(1) = (-a-b+c) e^{-1} = 0 \\
+  g''(4) = (2a+2b+c) e^{-4} = 0
+\end{gather*}
+これより$b=-a$，$c=0$，すなわち，
+\begin{equation*}
+  g(x) = ax(x-1)e^{-x}
+\end{equation*}
+
+いま，点$(0,k)$から$y = g(x)$に引いた接線の接点の座標を$(t,g(t))$とおくと，接線の方程式は$y = g'(t) x + k$となり，これが点$(t,g(t))$を通ることから
+\begin{equation*}
+  k = g(t) - g'(t) \cdot t = a (t^3-2t^2) e^{-t}
+\end{equation*}
+が成り立つ．そこで右辺を$h(t)$とおくと，(\CIDK{1377})より方程式$h(t) = k$は$-1 < k < 0$において相異なる3つの実数解を持つ\EqLabel{30-cond}．ここで，
+\begin{align*}
+  h'(t) &= a (3t^2-4t) e^{-t} - a (t^3-2t^2) e^{-t} \\
+  &= -a t (t-1) (t-4) e^{-t}
+\end{align*}
+であることに注意すると，
+
+\Case{a}%
+$a > 0$のとき，$t > 2$ならば$h(t) > 0$なので，\EqRef{30-cond}における実数解は$t \le 2$の範囲に存在する．この範囲における$h(t)$の増減は以下のとおりである．
+\begin{equation*}
+  \def\C#1{\makebox[1.2em][c]{$#1$}}%
+  \begin{array}{|r||c|c|c|c|c|c|c|}
+    \hline
+    t\  & \C{-\infty} & \C{\cdots} & \C{0} & \C{\cdots} & \C{1} & \C{\cdots} & \C{2} \\
+    \hline
+    h'(t) & & + & 0 & - & 0 & \multicolumn{2}{c|}{+} \\
+    \hline
+    h(t) & -\infty & \nearrow & 0 & \searrow & h(1) & \nearrow & 0 \\
+    \hline
+  \end{array}
+\end{equation*}
+\EqRef{30-cond}より，$h(1)=-ae^{-1}=-1$，すなわち$a=e$．
+
+\Case{b}%
+$a < 0$のとき，同様にして考えると，\EqRef{30-cond}を満たすような$a$は存在しないことがわかる．
+
+以上より，
+\begin{equation*}
+  g(x) = ex(x-1) e^{-x} = x(x-1)e^{-x+1}
+\end{equation*}
+であるので，
+\begin{equation*}
+  g(-2) \cdot g(4) = 6e^3 \cdot 12e^{-3} = \Ans{72}
+\end{equation*}
+
+%%----------------
+
+\end{document}

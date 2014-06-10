@@ -1,0 +1,85 @@
+\ProvidesPackage{ksatmath}
+
+\RequirePackage{amsmath}
+\RequirePackage{enumitem}
+\RequirePackage{graphicx}
+\RequirePackage{mathtools}
+\RequirePackage{okumacro}
+
+
+%%--------------------------------
+%%  Page Layout
+
+\setlength\abovedisplayskip{0.5zh}
+\setlength\belowdisplayskip{0.5zh}
+\setlength\columnseprule{0.5pt}
+\setlength\parindent{0.0zw}
+\setlength\parskip{0.5zh}
+
+\setlist[itemize]{topsep=0.5zh,itemindent=1zw}
+
+
+%%--------------------------------
+%%  Questions
+
+\newcounter{Question}
+
+\newcommand{\Question}{%
+  \pagebreak[2]\vspace{1.25zh plus 0.25zh minus 0.25zh}%
+  \refstepcounter{Question}%
+  \bgroup \fontfamily{cmss}\selectfont \arabic{Question}.\hquad \egroup
+}
+
+
+%%--------------------------------
+%%  Labels
+
+\newcounter{Eq}[Question]
+
+\newtagform{HighSchool}[\MARU]{$\cdot$$\cdot$$\cdot$$\cdot$\,}{}
+\usetagform{HighSchool}
+
+\newcommand{\EqLabel}[1]{%
+  \refstepcounter{Eq}%
+  \ifx \tag\dft@tag
+    \hquad\text{$\cdot$$\cdot$$\cdot$$\cdot$\,\MARU{\arabic{Eq}}}%
+  \else
+    \tag{\arabic{Eq}}%
+  \fi \label{#1}}
+\newcommand{\EqRef}[1]{\MARU{\ref{#1}}}
+
+
+%%--------------------------------
+%%  Miscellany
+
+\newcommand{\Ans}[1]{\boldsymbol{#1}}
+
+\newcommand{\Fig}[1]{%
+  \begin{center}\includegraphics[scale=0.9]{#1}\end{center}}
+
+\newcommand{\Pt}[1]{\mathrm{#1}}
+\newcommand{\Vect}[1]{\overrightarrow{\mathrm{#1}}}
+\newcommand{\Line}[1]{\overline{\mathrm{#1}}}
+
+\newcommand{\nCr}[2]{{}_{#1}\mathrm{C}{}_{#2}}
+\newcommand{\nHr}[2]{{}_{#1}\mathrm{H}{}_{#2}}
+\newcommand{\nPr}[2]{{}_{#1}\mathrm{P}{}_{#2}}
+
+\newcommand{\Therefore}[1]{%
+  \ensuremath \tag*{\makebox[9zw][l]{$\displaystyle\therefore\ #1$}}}
+
+\newcommand{\Case}[1]{\makebox[2zw][l]{(\textit{#1})}}
+
+\newcommand{\hquad}{\kern+.5em}
+
+
+%%--------------------------------
+%%  Hacks :(
+
+\renewenvironment{align*}{%
+  \vspace{-\baselineskip}%
+  \vspace{\abovedisplayskip}%
+  \start@align\@ne\st@rredtrue\m@ne
+}{%
+  \endalign
+}
